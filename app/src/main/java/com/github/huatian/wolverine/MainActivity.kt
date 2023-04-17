@@ -2,6 +2,7 @@ package com.github.huatian.wolverine
 
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.github.huatian.common.base.BaseActivity
@@ -22,7 +23,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 R.id.navigation_home, R.id.navigation_collect, R.id.navigation_mine
             )
         )
-        setupActionBarWithNavController(this, navController, appBarConfiguration)
+        NavigationUI.setupWithNavController(binding.navView, navController)
+
+//        setupActionBarWithNavController(this, navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
     }
 }
