@@ -17,15 +17,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun init() {
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_collect, R.id.navigation_mine
-            )
-        )
         NavigationUI.setupWithNavController(binding.navView, navController)
 
-//        setupActionBarWithNavController(this, navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
     }
 }

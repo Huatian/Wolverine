@@ -11,8 +11,7 @@ import androidx.databinding.ViewDataBinding
  * @author WangHuatian <br /> 773512457@qq.com
  */
 abstract class BaseVMFragment<T : ViewDataBinding> : BaseFragment<T>() {
-    protected var currentPage = 0
-    protected var currentPageSize = 10
+
     private var isFirstLoad: Boolean = true
 
     abstract fun observe()

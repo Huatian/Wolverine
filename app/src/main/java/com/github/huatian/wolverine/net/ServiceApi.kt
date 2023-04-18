@@ -1,5 +1,6 @@
 package com.github.huatian.wolverine.net
 
+import com.github.huatian.wolverine.entity.Article
 import com.github.huatian.wolverine.entity.ProfileEntity
 import com.github.huatian.wolverine.entity.UserInfoEntity
 import retrofit2.http.*
@@ -23,4 +24,10 @@ interface ServiceApi {
 
     @POST("/user/lg/userinfo/json")
     suspend fun getProfile(): BaseResp<ProfileEntity>
+
+    @GET("article/list/{page}/json")
+    suspend fun getArticleList(
+        @Path("page") page: Int,
+        @Query("page_size") page_size: Int
+    ): BaseResp<PageResp<Article>>
 }

@@ -1,7 +1,22 @@
 package com.github.huatian.wolverine.ui.fm
 
-import androidx.lifecycle.ViewModel
+import com.github.huatian.common.base.BaseViewModel
+import com.github.huatian.wolverine.entity.Article
+import com.github.huatian.wolverine.net.PageResp
+import com.github.huatian.wolverine.net.RespStateData
+import com.github.huatian.wolverine.net.RetrofitManager
+import com.github.huatian.wolverine.vm.request
 
-class HomeViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class HomeViewModel : BaseViewModel() {
+
+    val pageList = RespStateData<PageResp<Article>>()
+
+    fun getOrderList(pageNo: Int) {
+        launch {
+            request(pageList){
+                RetrofitManager.service.getArticleList(pageNo, 10)
+            }
+        }
+    }
+
 }

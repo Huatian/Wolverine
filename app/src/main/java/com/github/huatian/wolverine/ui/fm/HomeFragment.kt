@@ -5,14 +5,17 @@ import com.github.huatian.common.base.BaseFragment
 import com.github.huatian.common.base.BaseVMFragment
 import com.github.huatian.wolverine.R
 import com.github.huatian.wolverine.databinding.FragmentHomeBinding
+import com.github.huatian.wolverine.entity.Article
+import com.github.huatian.wolverine.ui.adapter.ArticleAdapter
 
 class HomeFragment : BaseVMFragment<FragmentHomeBinding>() {
 
-    companion object {
-        fun newInstance() = HomeFragment()
-    }
-
     private lateinit var viewModel: HomeViewModel
+    private val dataList = mutableListOf<Article>()
+
+    private lateinit var articleAdapter: ArticleAdapter
+    private var rlStatusFlag = 0
+
     override fun observe() {
 
     }
