@@ -19,8 +19,8 @@ abstract class BaseVMFragment<T : ViewDataBinding> : BaseFragment<T>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        observe()
         init()
+        observe()
     }
 
     override fun onResume() {

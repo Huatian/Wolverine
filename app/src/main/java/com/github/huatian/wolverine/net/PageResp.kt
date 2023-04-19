@@ -7,10 +7,9 @@ package com.github.huatian.wolverine.net
  * @author WangHuatian <br />
  * email 773512457@qq.com
  */
-
 class PageResp<T> {
 
-    var data: List<T>? = null
+    var datas: List<T>? = null
     var curPage: Int = 0
     var isLast: Boolean = false
 }

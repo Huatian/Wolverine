@@ -11,7 +11,7 @@ class HomeViewModel : BaseViewModel() {
 
     val pageList = RespStateData<PageResp<Article>>()
 
-    fun getOrderList(pageNo: Int) {
+    fun getArticleist(pageNo: Int) {
         launch {
             request(pageList){
                 RetrofitManager.service.getArticleList(pageNo, 10)

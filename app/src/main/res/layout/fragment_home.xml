@@ -42,14 +42,15 @@
             android:id="@+id/refreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="65dp">
+            android:layout_marginTop="65dp"
+            android:layout_marginBottom="50dp">
 
             <com.scwang.smart.refresh.header.ClassicsHeader
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_order"
+                android:id="@+id/rv_article"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
