@@ -1,6 +1,7 @@
 package com.github.huatian.common.base
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.databinding.ViewDataBinding
 
@@ -19,6 +20,7 @@ abstract class BaseVMFragment<T : ViewDataBinding> : BaseFragment<T>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("test", "onViewCreated")
         init()
         observe()
     }

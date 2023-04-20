@@ -30,7 +30,7 @@ data class ProfileEntity(
     var userInfo: UserInfoEntity
 )
 
-data class Article(
+data class ArticleEntity(
     val author: String,
     val fresh: Boolean,
     val id: Int,
@@ -41,4 +41,13 @@ data class Article(
     val superChapterId: Int,
     val superChapterName: String,
     var collect: Boolean
+)
+
+data class CollectEntity(
+    val author: String,
+    val chapterName: String,
+    val niceDate: String,
+    val title: String,
+    val link: String,
+    val id: Int
 )

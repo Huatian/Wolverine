@@ -9,7 +9,7 @@ package com.github.huatian.wolverine.net
  */
 class PageResp<T> {
 
-    var datas: List<T>? = null
+    var datas: List<T> = emptyList()
     var curPage: Int = 0
     var isLast: Boolean = false
 }

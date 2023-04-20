@@ -33,7 +33,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 
-        viewModel.userInfo.observe(this, object : BaseStateObserver<UserInfoEntity>(null){
+        viewModel.userInfo.observe(this, object : BaseStateObserver<UserInfoEntity>(){
             override fun getRespDataSuccess(it: UserInfoEntity) {
                 SharedPreferencesUtil.putString(Constants.USER_ID, it.id)
                 SharedPreferencesUtil.putString(Constants.USER_NAME, it.nickname)

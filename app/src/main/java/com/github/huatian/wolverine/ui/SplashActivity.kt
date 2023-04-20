@@ -28,7 +28,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     override fun init() {
         viewModel = ViewModelProvider(this)[SplashViewModel::class.java]
 
-        viewModel.profileData.observe(this, object : BaseStateObserver<ProfileEntity>(null) {
+        viewModel.profileData.observe(this, object : BaseStateObserver<ProfileEntity>() {
 
             override fun getRespDataSuccess(it: ProfileEntity) {
                 super.getRespDataSuccess(it)

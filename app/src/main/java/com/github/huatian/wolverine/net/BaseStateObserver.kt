@@ -10,11 +10,9 @@ import androidx.lifecycle.Observer
  * @author WangHuatian <br />
  * email 773512457@qq.com
  */
-
-open class BaseStateObserver<T>(var t: Boolean?) : Observer<BaseResp<T>> {
+open class BaseStateObserver<T>() : Observer<BaseResp<T>> {
 
     override fun onChanged(baseResp: BaseResp<T>) {
-
         when (baseResp.responseState) {
             BaseResp.ResponseState.REQUEST_START -> {
                 Log.d("BaseStateObserver", "Observer: start")
