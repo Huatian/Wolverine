@@ -10,7 +10,7 @@ import com.github.huatian.wolverine.vm.request
 class HomeViewModel : BaseViewModel() {
 
     val pageList = RespStateData<PageResp<ArticleEntity>>()
-    var collectData = RespStateData<String>()
+    val collectData = RespStateData<String>()
 
     fun getArticleList(pageNo: Int) {
         launch {

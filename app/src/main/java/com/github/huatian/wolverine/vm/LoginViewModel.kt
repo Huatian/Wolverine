@@ -12,7 +12,6 @@ import com.github.huatian.wolverine.net.RetrofitManager
  * @author WangHuatian <br />
  * email 773512457@qq.com
  */
-
 class LoginViewModel() : BaseViewModel() {
 
     var userInfo = RespStateData<UserInfoEntity>()

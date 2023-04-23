@@ -46,7 +46,14 @@ class CollectFragment : BaseVMFragment<FragmentCollectBinding>() {
     }
 
     override fun lazyLoad() {
-        viewModel.getCollectList(0)
+        if (!dataList.isNullOrEmpty()){
+            articleAdapter.notifyDataSetChanged()
+            if (viewModel.pageList.value!!.data!!.isLast){
+                binding.refreshLayout.finishLoadMoreWithNoMoreData()
+            }
+        }else{
+            viewModel.getCollectList(0)
+        }
     }
 
     override fun observe() {

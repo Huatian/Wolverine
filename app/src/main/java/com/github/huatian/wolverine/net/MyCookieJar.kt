@@ -1,6 +1,7 @@
 package com.github.huatian.wolverine.net
 
 import android.util.Log
+import com.github.huatian.common.net.CookieBean
 import com.github.huatian.common.util.SharedPreferencesUtil
 import com.github.huatian.wolverine.util.Constants
 import com.google.gson.Gson

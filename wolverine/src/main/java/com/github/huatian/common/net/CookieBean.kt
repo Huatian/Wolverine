@@ -1,4 +1,4 @@
-package com.github.huatian.wolverine.net
+package com.github.huatian.common.net
 
 import okhttp3.Cookie
 

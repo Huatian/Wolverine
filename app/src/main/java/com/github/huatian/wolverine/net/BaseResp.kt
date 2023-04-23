@@ -1,15 +1,11 @@
 package com.github.huatian.wolverine.net
 
-import androidx.lifecycle.MutableLiveData
-
 /**
- * description
- *
- * date 2023/4/9
+ * 
  * @author WangHuatian <br />
  * email 773512457@qq.com
+ * @since 2023/4/9
  */
-
 class BaseResp<T> {
     var errorCode: Int = -1
     var errorMsg: String = ""

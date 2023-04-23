@@ -1,5 +1,6 @@
 package com.github.huatian.wolverine.net
 
+import com.github.huatian.common.net.LogInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -9,6 +9,8 @@
     <color name="color_333333">#FF333333</color>
     <color name="color_666666">#FF666666</color>
     <color name="color_999999">#FF999999</color>
+    <color name="color_aaaaaa">#FFaaaaaa</color>
+    <color name="color_cccccc">#FFcccccc</color>
 
     <color name="red">#e44d41</color>
     <color name="green">#32b464</color>

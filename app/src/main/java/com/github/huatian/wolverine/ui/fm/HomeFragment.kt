@@ -53,7 +53,14 @@ class HomeFragment : BaseVMFragment<FragmentHomeBinding>() {
     }
 
     override fun lazyLoad() {
-        viewModel.getArticleList(0)
+        if (!dataList.isNullOrEmpty()){
+            articleAdapter.notifyDataSetChanged()
+            if (viewModel.pageList.value!!.data!!.isLast){
+                binding.refreshLayout.finishLoadMoreWithNoMoreData()
+            }
+        }else{
+            viewModel.getArticleList(0)
+        }
     }
 
     override fun observe() {
