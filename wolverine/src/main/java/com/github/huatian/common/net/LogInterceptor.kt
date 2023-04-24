@@ -81,7 +81,11 @@ class LogInterceptor: Interceptor {
             "->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->"
         )
         logHeaders(strb, request, connection)
-        strb.appendLine("RequestBody:${bodyToString(request.body)}")
+        if ((request.body?.contentType()?.type ?: "") != "multipart"){
+            strb.appendLine("RequestBody:${bodyToString(request.body)}")
+        }else{
+            strb.appendLine("RequestBody:${(request.body as MultipartBody).size}")
+        }
         logThat(ColorLevel.INFO(strb.toString()))
     }
 
