@@ -16,8 +16,8 @@ fun Number.dp2px(): Int {
     return (f * scale + 0.5f).toInt()
 }
 
-fun Long.toDateTime(timeStamp: Long): String{
-    val date = Date(timeStamp)
+fun Long.toDateTime(): String{
+    val date = Date(this)
     val pattern = "yyyy-MM-dd HH:mm:ss"
     val simpleDateFormat = SimpleDateFormat(pattern, Locale.CHINA)
     return simpleDateFormat.format(date)
